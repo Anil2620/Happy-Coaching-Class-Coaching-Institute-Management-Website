@@ -1,79 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Happy Coaching Class - Quality education for Class 5 to Class 12 in Odisha.">
-  <title>Notices | Happy Coaching Class</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manage Notices | Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+<div class="admin-layout">
 
-<header class="site-header">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html">
-      <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-      <span><strong>Happy</strong><small>Coaching Class</small></span>
-    </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
-    <nav class="nav" id="mainNav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="classes.html">Classes</a>
-      <a href="courses.html">Courses</a>
-      <a href="teachers.html">Teachers</a>
-      <a href="batches.html">Batches</a>
-      <a href="materials.html">Materials</a>
-      <a href="notices.html">Notices</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="results.html">Results</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a class="btn btn-primary nav-cta" href="contact.html">Join Now</a>
-  </div>
-</header>
+<aside class="sidebar">
+  <a class="admin-brand" href="dashboard.html"><i class="fa-solid fa-graduation-cap"></i> Happy Coaching</a>
+  <nav>
+    <a href="dashboard.html"><i class="fa-solid fa-gauge"></i> Dashboard</a>
+    <a href="students.html"><i class="fa-solid fa-users"></i> Students</a>
+    <a href="teachers.html"><i class="fa-solid fa-chalkboard-user"></i> Teachers</a>
+    <a href="courses.html"><i class="fa-solid fa-book"></i> Courses</a>
+    <a href="notices.html"><i class="fa-solid fa-bullhorn"></i> Notices</a>
+    <a href="materials.html"><i class="fa-solid fa-file"></i> Materials</a>
+    <a href="gallery.html"><i class="fa-solid fa-images"></i> Gallery</a>
+    <a href="../index.html"><i class="fa-solid fa-globe"></i> View Website</a>
+  </nav>
+</aside>
 
+<main class="admin-main">
 
-<section class="page-hero"><div class="container"><span class="eyebrow">NOTICE BOARD</span><h1>Latest <span>Updates</span></h1><p>Important announcements for students and parents.</p></div></section>
-<section class="section"><div class="container"><div class="notice-list">
-<article class="notice-item"><span class="notice-date">NOTICE</span><div><h3>New Batch Admissions</h3><p>Admissions for upcoming batches are open. Contact the institute for current availability.</p></div></article>
-<article class="notice-item"><span class="notice-date">TEST</span><div><h3>Weekly Test</h3><p>Students are encouraged to attend scheduled tests for regular assessment.</p></div></article>
-<article class="notice-item"><span class="notice-date">UPDATE</span><div><h3>Class Schedule</h3><p>Current batch timings will be updated here by the institute.</p></div></article>
-</div></div></section>
+<div class="admin-top"><div><h1><i class="fa-solid fa-bullhorn"></i> Manage Notices</h1><p>Publish announcements for students and parents.</p></div><a class="btn btn-primary" href="dashboard.html">Dashboard</a></div>
+<form class="admin-form" onsubmit="event.preventDefault(); alert('Demo: data saved locally in this UI. Connect Firebase for permanent online storage.'); this.reset();">
+<label>Notice Title<input type="text" placeholder="Notice title"></label><label>Category<input type="text" placeholder="Admission / Test / Holiday"></label><label>Notice Details<input type="text" placeholder="Details"></label>
+<button class="btn btn-primary" type="submit">Save</button>
+</form>
+<script>if(localStorage.getItem("hcc_admin")!=="true") location.href="login.html";</script>
 
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <a class="brand footer-brand" href="index.html">
-        <span class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></span>
-        <span><strong>Happy</strong><small>Coaching Class</small></span>
-      </a>
-      <p>Quality education for students from Class 5 to Class 12 in Odisha.</p>
-    </div>
-    <div>
-      <h3>Quick Links</h3>
-      <a href="classes.html">Classes</a>
-      <a href="teachers.html">Teachers</a>
-      <a href="materials.html">Study Materials</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div>
-      <h3>Contact</h3>
-      <p><i class="fa-solid fa-location-dot"></i> Odisha, India</p>
-      <p><i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX</p>
-      <p><i class="fa-solid fa-envelope"></i> info@happycoachingclass.com</p>
-    </div>
-  </div>
-  <div class="footer-bottom">© <span id="year"></span> Happy Coaching Class. All Rights Reserved.</div>
-</footer>
-
-<script src="js/script.js"></script>
+</main>
+</div>
 
 </body>
 </html>

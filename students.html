@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manage Teachers | Admin</title>
+<title>Students & Enquiries | Admin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/admin.css">
@@ -28,9 +28,9 @@
 
 <main class="admin-main">
 
-<div class="admin-top"><div><h1><i class="fa-solid fa-chalkboard-user"></i> Manage Teachers</h1><p>Add faculty details for the public Teachers page.</p></div><a class="btn btn-primary" href="dashboard.html">Dashboard</a></div>
+<div class="admin-top"><div><h1><i class="fa-solid fa-users"></i> Students & Enquiries</h1><p>View enquiries submitted from the website.</p></div><a class="btn btn-primary" href="dashboard.html">Dashboard</a></div>
 <form class="admin-form" onsubmit="event.preventDefault(); alert('Demo: data saved locally in this UI. Connect Firebase for permanent online storage.'); this.reset();">
-<label>Teacher Name<input type="text" placeholder="Teacher name"></label><label>Subject<input type="text" placeholder="Subject"></label><label>Qualification<input type="text" placeholder="Qualification"></label><label>Experience<input type="text" placeholder="Years of experience"></label>
+<label>Student Name<input type="text" placeholder="Student name"></label><label>Parent Name<input type="text" placeholder="Parent name"></label><label>Phone<input type="tel" placeholder="Phone number"></label><label>Class<input type="text" placeholder="Class"></label>
 <button class="btn btn-primary" type="submit">Save</button>
 </form>
 <script>if(localStorage.getItem("hcc_admin")!=="true") location.href="login.html";</script>
