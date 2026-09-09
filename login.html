@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | Happy Coaching Class</title>
+<link rel="stylesheet" href="../css/admin.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="login-page">
+<div class="login-box">
+  <h1><i class="fa-solid fa-graduation-cap"></i> Admin Login</h1>
+  <p>Happy Coaching Class</p>
+  <form id="loginForm">
+    <label>Email<input id="email" type="email" required placeholder="admin@example.com"></label>
+    <label>Password<input id="password" type="password" required placeholder="Password"></label>
+    <button class="btn btn-primary" type="submit">Login</button>
+    <p id="loginMessage" style="margin-top:14px;text-align:center;"></p>
+  </form>
+  <p style="font-size:12px;margin-top:18px;">Demo UI only. Connect Firebase Authentication before production use.</p>
+</div>
+<script>
+document.getElementById("loginForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const email=document.getElementById("email").value;
+  const password=document.getElementById("password").value;
+  const msg=document.getElementById("loginMessage");
+  if(email==="anilkumar200426@gmail.com" && password==="Anil@2004"){
+    localStorage.setItem("hcc_admin","true");
+    location.href="dashboard.html";
+  }else{
+    msg.textContent="Demo login: admin@happycoachingclass.com / admin123";
+    msg.style.color="#dc2626";
+  }
+});
+</script>
+</body>
+</html>

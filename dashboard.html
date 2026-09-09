@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manage Teachers | Admin</title>
+<title>Dashboard | Admin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/admin.css">
@@ -28,12 +28,20 @@
 
 <main class="admin-main">
 
-<div class="admin-top"><div><h1><i class="fa-solid fa-chalkboard-user"></i> Manage Teachers</h1><p>Add faculty details for the public Teachers page.</p></div><a class="btn btn-primary" href="dashboard.html">Dashboard</a></div>
-<form class="admin-form" onsubmit="event.preventDefault(); alert('Demo: data saved locally in this UI. Connect Firebase for permanent online storage.'); this.reset();">
-<label>Teacher Name<input type="text" placeholder="Teacher name"></label><label>Subject<input type="text" placeholder="Subject"></label><label>Qualification<input type="text" placeholder="Qualification"></label><label>Experience<input type="text" placeholder="Years of experience"></label>
-<button class="btn btn-primary" type="submit">Save</button>
-</form>
-<script>if(localStorage.getItem("hcc_admin")!=="true") location.href="login.html";</script>
+<div class="admin-top"><div><h1>Dashboard</h1><p>Happy Coaching Class administration panel.</p></div><button class="btn btn-primary" onclick="logout()">Logout</button></div>
+<div class="admin-grid">
+  <div class="admin-card"><i class="fa-solid fa-users"></i><strong id="studentCount">0</strong><span>Students / Enquiries</span></div>
+  <div class="admin-card"><i class="fa-solid fa-chalkboard-user"></i><strong>10+</strong><span>Teachers</span></div>
+  <div class="admin-card"><i class="fa-solid fa-book"></i><strong>8</strong><span>Class Levels</span></div>
+  <div class="admin-card"><i class="fa-solid fa-bullhorn"></i><strong>3</strong><span>Sample Notices</span></div>
+</div>
+<div class="admin-card" style="margin-top:20px;"><h2>Quick Actions</h2><p style="margin:12px 0;color:#64748b;">Use the sidebar to manage website content. Firebase integration can replace the current demo/local storage behavior.</p></div>
+<script>
+if(localStorage.getItem("hcc_admin")!=="true") location.href="login.html";
+const enquiries=JSON.parse(localStorage.getItem("hcc_enquiries")||"[]");
+document.getElementById("studentCount").textContent=enquiries.length;
+function logout(){localStorage.removeItem("hcc_admin");location.href="login.html";}
+</script>
 
 </main>
 </div>
