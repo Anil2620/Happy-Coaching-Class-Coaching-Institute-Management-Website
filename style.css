@@ -1,0 +1,143 @@
+:root{
+  --primary:#2563eb;
+  --primary-dark:#1d4ed8;
+  --secondary:#f59e0b;
+  --dark:#111827;
+  --text:#374151;
+  --muted:#6b7280;
+  --bg:#f8fafc;
+  --white:#fff;
+  --border:#e5e7eb;
+  --shadow:0 12px 35px rgba(15,23,42,.08);
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--white);line-height:1.7}
+h1,h2,h3{font-family:Poppins,Inter,sans-serif;color:var(--dark);line-height:1.2}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-wrap{height:78px;display:flex;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;margin-right:auto}
+.brand-icon{width:42px;height:42px;border-radius:12px;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:19px}
+.brand strong{display:block;font-size:21px;font-family:Poppins}
+.brand small{display:block;color:var(--muted);font-size:11px;margin-top:-5px}
+.nav{display:flex;align-items:center;gap:18px}
+.nav a{font-size:14px;font-weight:600;color:#4b5563}
+.nav a:hover,.nav a.active{color:var(--primary)}
+.nav-cta{margin-left:4px}
+.menu-toggle{display:none;border:0;background:transparent;font-size:24px;color:var(--dark)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 20px;border-radius:10px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.25s}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+.btn-outline{border-color:#fff;color:#fff}
+.btn-outline:hover{background:#fff;color:var(--primary)}
+.btn-light{background:#fff;color:var(--primary)}
+.hero{min-height:570px;position:relative;background:linear-gradient(120deg,#0f172a,#1e3a8a);display:flex;align-items:center;overflow:hidden}
+.hero:after{content:"";position:absolute;inset:auto -10% -55% auto;width:650px;height:650px;border:80px solid rgba(255,255,255,.05);border-radius:50%}
+.hero-overlay{position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(37,99,235,.35),transparent 35%)}
+.hero-content{position:relative;z-index:1}
+.hero-text{max-width:720px;color:#fff}
+.hero h1{font-size:clamp(42px,6vw,72px);color:#fff;margin:18px 0}
+.hero h1 span,.page-hero h1 span,h2 span{color:var(--secondary)}
+.hero p{font-size:18px;max-width:680px;color:#dbeafe}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:1.6px;color:#dbeafe}
+.eyebrow.dark{color:var(--primary)}
+.hero-actions{display:flex;gap:12px;margin-top:28px}
+.stats{background:#fff;box-shadow:var(--shadow);position:relative;z-index:2}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:25px 0}
+.stats-grid div{text-align:center;border-right:1px solid var(--border)}
+.stats-grid div:last-child{border-right:0}
+.stats-grid strong{display:block;font:800 30px Poppins;color:var(--primary)}
+.stats-grid span{color:var(--muted);font-size:14px}
+.section{padding:85px 0}
+.section.soft{background:var(--bg)}
+.section-heading{text-align:center;max-width:760px;margin:0 auto 42px}
+.section-heading.left{text-align:left;margin-left:0}
+.section-heading h2{font-size:clamp(30px,4vw,44px);margin:12px 0}
+.section-heading p{color:var(--muted);margin-top:10px}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.about-panel{background:linear-gradient(145deg,#eff6ff,#dbeafe);padding:55px;border-radius:28px;min-height:330px;display:flex;flex-direction:column;justify-content:center}
+.about-panel.tall{min-height:380px}
+.panel-icon{width:70px;height:70px;border-radius:20px;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:28px;margin-bottom:25px}
+.about-panel h3{font-size:28px;margin-bottom:10px}
+.about-panel strong{margin-top:20px;color:var(--primary)}
+.check-list{list-style:none;margin:22px 0}
+.check-list li{margin:9px 0;font-weight:600}
+.check-list i{color:#16a34a;margin-right:8px}
+.text-link{color:var(--primary);font-weight:800;display:inline-flex;gap:7px;align-items:center}
+.card-grid{display:grid;gap:22px}
+.card-grid.four{grid-template-columns:repeat(4,1fr)}
+.card-grid.three{grid-template-columns:repeat(3,1fr)}
+.info-card,.feature-card,.teacher-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 5px 18px rgba(15,23,42,.04);transition:.25s}
+.info-card:hover,.feature-card:hover,.teacher-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#bfdbfe}
+.info-card>i,.feature-card>i{font-size:28px;color:var(--primary);margin-bottom:18px}
+.info-card h3,.feature-card h3{margin-bottom:8px}
+.info-card p,.feature-card p{color:var(--muted);font-size:14px}
+.class-card{position:relative}
+.class-number{display:grid;place-items:center;width:50px;height:50px;border-radius:14px;background:#eff6ff;color:var(--primary);font:800 20px Poppins;margin-bottom:18px}
+.class-card .text-link{margin-top:20px;font-size:14px}
+.badge{display:inline-block;padding:5px 10px;background:#eff6ff;color:var(--primary);border-radius:999px;font-size:11px;font-weight:800;margin:8px 0 12px}
+.cta{background:linear-gradient(120deg,#1d4ed8,#2563eb);padding:65px 0;color:#fff}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.cta h2{color:#fff;font-size:38px;margin:8px 0}
+.cta p{color:#dbeafe}
+.page-hero{padding:90px 0;background:linear-gradient(120deg,#0f172a,#1e3a8a);color:#fff}
+.page-hero h1{font-size:clamp(40px,5vw,60px);color:#fff;margin:14px 0}
+.page-hero p{color:#dbeafe;max-width:680px}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}
+.schedule-table{width:100%;border-collapse:collapse;min-width:700px;background:#fff}
+.schedule-table th,.schedule-table td{padding:18px;text-align:left;border-bottom:1px solid var(--border)}
+.schedule-table th{background:#eff6ff;color:var(--dark);font-size:13px}
+.schedule-table td a{color:var(--primary);font-weight:700}
+.notice-note{margin-top:18px;color:var(--muted);font-size:13px}
+.notice-list{max-width:900px;margin:auto;display:grid;gap:16px}
+.notice-item{display:flex;gap:20px;align-items:flex-start;padding:24px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 5px 18px rgba(15,23,42,.04)}
+.notice-date{min-width:78px;padding:7px 10px;border-radius:9px;background:#eff6ff;color:var(--primary);font-size:11px;font-weight:800;text-align:center}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.gallery-placeholder{aspect-ratio:1/1;border-radius:18px;background:linear-gradient(145deg,#dbeafe,#eff6ff);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--primary);gap:10px;font-weight:800}
+.gallery-placeholder i{font-size:40px}
+.teacher-card{padding:0;overflow:hidden}
+.teacher-photo{height:220px;background:linear-gradient(145deg,#dbeafe,#eff6ff);display:grid;place-items:center;color:var(--primary);font-size:70px}
+.teacher-body{padding:22px}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+.contact-card{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--border)}
+.contact-card>i{width:45px;height:45px;border-radius:12px;background:#eff6ff;color:var(--primary);display:grid;place-items:center}
+.contact-card h3{font-size:17px}.contact-card p{margin:3px 0}.contact-card small{color:var(--muted)}
+.contact-form{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px;box-shadow:var(--shadow)}
+.contact-form h2{margin-bottom:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact-form label{display:block;font-weight:700;font-size:13px;margin-bottom:16px}
+input,select,textarea{width:100%;margin-top:7px;padding:13px 14px;border:1px solid var(--border);border-radius:10px;font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.form-message{margin-top:12px;font-size:14px;font-weight:700}
+.footer{background:#0f172a;color:#cbd5e1;padding-top:55px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;padding-bottom:40px}
+.footer h3{color:#fff;margin-bottom:14px;font-size:17px}
+.footer a:not(.brand){display:block;margin:7px 0;color:#cbd5e1;font-size:14px}
+.footer p{font-size:14px;margin:8px 0}.footer-brand strong{color:#fff}.footer-brand small{color:#94a3b8}
+.footer-bottom{text-align:center;padding:18px;border-top:1px solid rgba(255,255,255,.1);font-size:13px}
+.results-stats{margin-bottom:70px;background:#fff;border:1px solid var(--border);border-radius:20px}
+
+/* Real Happy Coaching Class branding and faculty photos */
+.brand-icon{overflow:hidden}
+.brand-icon img{width:100%;height:100%;object-fit:cover;display:block}
+.teacher-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.teacher-photo.real-photo{height:220px;background:#eef4ff;overflow:hidden}
+.teacher-photo.real-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.featured-founder{border:2px solid #f59e0b}
+.featured-founder .teacher-photo{height:235px}
+.faculty-section-title{text-align:center;margin-bottom:32px}
+.faculty-section-title h2{font-size:38px;margin:10px 0}
+.faculty-section-title p{color:var(--muted)}
+.founder-photo-wrap{border-radius:26px;overflow:hidden;background:#eff6ff;box-shadow:var(--shadow);max-width:470px}
+.founder-photo-wrap img{width:100%;height:430px;object-fit:cover;display:block}
+.card-grid.two{grid-template-columns:repeat(2,1fr)}
+.program-card{min-height:190px}
+.gallery-real{aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:#eef4ff;position:relative}
+.gallery-real img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-real span{position:absolute;bottom:0;left:0;right:0;padding:12px;background:rgba(15,23,42,.82);color:#fff;font-size:13px;font-weight:700}
+.footer-brand .brand-icon{background:#fff}
+@media(max-width:1100px){.teacher-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.teacher-grid,.card-grid.two{grid-template-columns:1fr}.founder-photo-wrap{max-width:100%}.founder-photo-wrap img{height:360px}}
